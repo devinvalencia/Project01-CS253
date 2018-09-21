@@ -3,9 +3,8 @@ public class Factorial {
         if (x == 0) {
             return 1;
         }
-        return x * factorial(x-1);
+        int results = x * factorial(x-1);
+        System.out.println(results);
+        return results;
     }
-    /*
-    Comment Test
-     */
 }
