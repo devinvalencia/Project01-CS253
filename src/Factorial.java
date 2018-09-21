@@ -4,7 +4,6 @@ public class Factorial {
             return 1;
         }
         int results = x * factorial(x-1);
-        System.out.println(results);
         return results;
     }
 }
