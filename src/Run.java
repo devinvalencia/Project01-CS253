@@ -4,6 +4,7 @@ public class Run {
     public static void main(String[] args) {
         Scanner userinput = new Scanner(System.in);
         int selection = 0;
+        int arr[] = {64, 34, 25, 12, 22, 11, 90};
 
         while (selection != 7) {
             System.out.println("\nWhich program would you like to run?");
@@ -14,19 +15,16 @@ public class Run {
             selection = userinput.nextInt();
 
             if (selection == 1) {
-                int arr[] = {64, 34, 25, 12, 22, 11, 90};
                 BubbleSort.bubbleSort(arr);
                 BubbleSort.printArray(arr);
             }
 
             if (selection == 2) {
-                int arr[] = {64, 34, 25, 12, 22, 11, 90};
                 InsertionSort.sort(arr);
                 InsertionSort.printArray(arr);
             }
 
             if (selection == 3) {
-                int arr[] = {64, 34, 25, 12, 22, 11, 90};
                 SelectionSort.sort(arr);
                 SelectionSort.printArray(arr);
             }
