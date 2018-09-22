@@ -4,7 +4,7 @@ public class Run {
     public static void main(String[] args) {
         Scanner userinput = new Scanner(System.in);
         int selection = 0;
-        int arr[] = {64, 34, 25, 12, 22, 11, 90};
+        int arr[] = InRead.reader();
 
         while (selection != 7) {
             System.out.println("\nWhich program would you like to run?");
@@ -15,11 +15,18 @@ public class Run {
             selection = userinput.nextInt();
 
             if (selection == 1) {
+                System.out.println("Which Scenario would you like to test?");
+                System.out.println("[B]est Case? \n[W]orst Case? \n[Av]erage Case? \n[A]ll?");
+                String caseSelect = userinput.nextLine();
+                InRead.display();
+                /*
                 BubbleSort.bubbleSort(arr);
                 BubbleSort.printArray(arr);
+                */
             }
 
             if (selection == 2) {
+
                 InsertionSort.sort(arr);
                 InsertionSort.printArray(arr);
             }
