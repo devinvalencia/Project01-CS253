@@ -4,7 +4,7 @@ public class Run {
     public static void main(String[] args) {
         Scanner userinput = new Scanner(System.in);
         int selection = 0;
-        int arr[] = InRead.reader();
+        int arr[];
 
         while (selection != 7) {
             System.out.println("\nWhich program would you like to run?");
@@ -15,25 +15,57 @@ public class Run {
             selection = userinput.nextInt();
 
             if (selection == 1) {
-                System.out.println("Which Scenario would you like to test?");
-                System.out.println("[B]est Case? \n[W]orst Case? \n[Av]erage Case? \n[A]ll?");
-                String caseSelect = userinput.nextLine();
-                InRead.display();
-                /*
+                arr = CaseRun.reader();
                 BubbleSort.bubbleSort(arr);
                 BubbleSort.printArray(arr);
-                */
+
+                int rcvBool = CaseRun.bool;
+                if (rcvBool == 1) {
+                    arr = CaseRun.Avg2();
+                    System.out.println(Arrays.toString(arr));
+                    BubbleSort.bubbleSort(arr);
+                    BubbleSort.printArray(arr);
+                    Arrays.fill(arr,0);
+                    arr = CaseRun.Avg3();
+                    System.out.println(Arrays.toString(arr));
+                    BubbleSort.bubbleSort(arr);
+                    BubbleSort.printArray(arr);
+                    Arrays.fill(arr,0);
+                    rcvBool = 0;
+                }
             }
 
             if (selection == 2) {
-
+                arr = CaseRun.reader();
                 InsertionSort.sort(arr);
                 InsertionSort.printArray(arr);
+                int rcvBool = CaseRun.bool;
+                if (rcvBool == 1) {
+                    arr = CaseRun.Avg2();
+                    InsertionSort.sort(arr);
+                    InsertionSort.printArray(arr);
+                    arr = CaseRun.Avg3();
+                    InsertionSort.sort(arr);
+                    InsertionSort.printArray(arr);
+                    rcvBool = 0;
+                }
             }
 
             if (selection == 3) {
+                arr = CaseRun.reader();
                 SelectionSort.sort(arr);
                 SelectionSort.printArray(arr);
+                int rcvBool = CaseRun.bool;
+                if (rcvBool == 1) {
+                    arr = CaseRun.Avg2();
+                    SelectionSort.sort(arr);
+                    SelectionSort.printArray(arr);
+                    arr = CaseRun.Avg3();
+                    SelectionSort.sort(arr);
+                    SelectionSort.printArray(arr);
+                    rcvBool = 0;
+                }
+                }
             }
 
             if (selection == 4) {
@@ -59,5 +91,14 @@ public class Run {
             }
 
         }
+
+        public static int[] ClearList(int[] arr) {
+            for (int i=0; i < arr.length; i++) {
+                arr[i++] = 0;
+            }
+
+            Arrays.fill(arr,0);
+            return arr;
+        }
     }
-}
+
