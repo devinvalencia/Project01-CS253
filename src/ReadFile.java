@@ -3,8 +3,13 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ReadFile {
-    public static void work(File n) {
-        int[] temp1 = new int[2000];
+    public static void work(File n,int Size) {
+        int[] temp1 = new int[10];
+
+        if (Size == 1) {
+            temp1 = new int[2000];
+        }
+
         int i = 0;
 
         try {
