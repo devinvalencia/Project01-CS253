@@ -2,96 +2,54 @@ import java.io.*;
 import java.util.*;
 
 public class CaseRun {
-
     public static int i;
-    public static int bool = 0;
-    public static int[] list = new int[10];
-    public static int[] originalList = Worst();
 
-    public static int[] reader() {
-        Scanner userinput = new Scanner(System.in);
-        System.out.println("Which Scenario would you like to test?");
-        System.out.println("[B]est Case? \n[W]orst Case? \n[A]verage Case?");
-        String caseSelect = userinput.nextLine();
-
-        if (caseSelect.equalsIgnoreCase("B")) {
-            try {
-                Scanner getTxt = new Scanner(new File("src\\BestCase.txt"));
-                while (getTxt.hasNextInt()) {
-                    list[i++] = getTxt.nextInt();
-                }
-                getTxt.close();
-            } catch (Exception e) {
-                System.out.println("File No Found");
-            }
-            return list;
-        }
-
-        if (caseSelect.equalsIgnoreCase("W")) {
-            System.out.println(Arrays.toString(originalList));
-            return list;
-        }
-
-        if (caseSelect.equalsIgnoreCase("A")) {
-            try {
-                Scanner getTxt = new Scanner(new File("src\\AvgCase1.txt"));
-                while (getTxt.hasNextInt()) {
-                    list[i++] = getTxt.nextInt();
-                }
-                getTxt.close();
-            } catch (IOException e) {
-                System.out.println("File No Found");
-            }
-            bool = 1;
-            return list;
-        }
-
-        else {
-            return list;
-        }
-    }
-
-    public static int onoff() {
-        return bool;
-    }
-
-    public static int[] Avg2() {
+    public static int[] Worst() {
+        File f = new File("src\\WorstCase.txt");
+        int[] temp = new int[10];
         try {
-            Scanner getTxt = new Scanner(new File("src\\AvgCase2.txt"));
+            Scanner getTxt = new Scanner(f);
             while (getTxt.hasNextInt()) {
-                list[i++] = getTxt.nextInt();
+                temp[i++] = getTxt.nextInt();
             }
             getTxt.close();
+            System.out.println("FILE FOUND");
         } catch (Exception e) {
-            System.out.println("File No Found");
+            System.out.println("File Not Found");
         }
-        return list;
+        return temp;
     }
 
-    public static int[] Avg3() {
+    public static int[] Best() {
+        File f = new File("src\\BestCase.txt");
+        int[] temp = new int[10];
         try {
-            Scanner getTxt = new Scanner(new File("src\\AvgCase3.txt"));
+            Scanner getTxt = new Scanner(f);
             while (getTxt.hasNextInt()) {
-                list[i++] = getTxt.nextInt();
+                temp[i++] = getTxt.nextInt();
             }
             getTxt.close();
+            System.out.println("FILE FOUND");
         } catch (Exception e) {
-            System.out.println("File No Found");
+            System.out.println("File Not Found");
         }
-        return list;
+        return temp;
     }
 
-    private static int[] Worst() {
+    public static int[] Avg() {
+        File f = new File("src\\WorstCase.txt");
+        int[] temp = new int[10];
         try {
-            Scanner getTxt = new Scanner(new File("src\\WorstCase.txt"));
+            Scanner getTxt = new Scanner(f);
             while (getTxt.hasNextInt()) {
-                list[i++] = getTxt.nextInt();
+                temp[i++] = getTxt.nextInt();
             }
             getTxt.close();
+            System.out.println("FILE FOUND");
         } catch (Exception e) {
-            System.out.println("File No Found");
+            System.out.println("File Not Found");
         }
-        return list;
+        return temp;
     }
 
 }
