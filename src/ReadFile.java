@@ -13,6 +13,7 @@ public class ReadFile {
                 temp1[i++] = getTxt1.nextInt();
             }
             getTxt1.close();
+
         } catch (Exception e) {
             System.out.println("File Not Found");
         }
