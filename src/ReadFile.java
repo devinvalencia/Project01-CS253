@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ReadFile {
     public static void work(File n) {
-        int[] temp1 = new int[10];
+        int[] temp1 = new int[2000];
         int i = 0;
 
         try {
