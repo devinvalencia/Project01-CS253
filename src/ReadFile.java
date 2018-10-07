@@ -30,6 +30,7 @@ public class ReadFile {
             System.out.println(Arrays.toString(temp));
             BubbleSort.sort(temp);
             System.out.println(Arrays.toString(temp));
+            BubbleSort.report();
         }
         else if (x == 2) {
             int[] temp = Arrays.copyOf(temp1, temp1.length);
