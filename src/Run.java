@@ -16,28 +16,6 @@ public class Run {
             System.out.println("[4] Factorial \n[5] Fibonacci \n[6] Recursive Binary Search \n\n[7] Exit\n");
             selection = userinput.nextInt();
 
-            if (selection == 4) {
-                System.out.println("Please enter a number...");
-                int UserNum = userinput.nextInt();
-                int Ans = Factorial.factorial(UserNum);
-                System.out.println("The Factorial of " + UserNum + " is " + Ans);
-            }
-
-            if (selection == 5) {
-                System.out.println("Please enter a number...");
-                int UserNum = userinput.nextInt();
-                int Ans = Fibonacci.fib(UserNum);
-                System.out.println(Ans);
-            }
-
-            if (selection == 6) {
-                int[] list = {1,2,3,4,5,6,7,8,9,10};
-                System.out.println("Please enter the number you are searching for (Between 1 & 10) ...");
-                int Ans = userinput.nextInt();
-                int index = RecursiveBinarySearch.recursiveBinarySearch(list,0,list.length,Ans);
-                System.out.println("The number " + Ans + " is at index " + index);
-            }
-
             if (selection == 1) {
                 System.out.println("Which data set would you like to test?");
                 System.out.println("\n[1] Best Case ...1 to 10 \n[2] Worst Case ...1 to 10 \n[3] Average Case ...1 to 10");
@@ -194,7 +172,29 @@ public class Run {
                     ReadFile.work(Select,Size);
                 }
                 }
+            if (selection == 4) {
+                System.out.println("Please enter a number...");
+                int UserNum = userinput.nextInt();
+                int Ans = Factorial.factorial(UserNum);
+                System.out.println("The Factorial of " + UserNum + " is " + Ans);
             }
+
+            if (selection == 5) {
+                System.out.println("Please enter a number...");
+                int UserNum = userinput.nextInt();
+                int Ans = Fibonacci.fib(UserNum);
+                System.out.println(Ans);
+            }
+
+            if (selection == 6) {
+                int[] list = {1,2,3,4,5,6,7,8,9,10};
+                System.out.println("Please enter the number you are searching for (Between 1 & 10) ...");
+                int Ans = userinput.nextInt();
+                int index = RecursiveBinarySearch.recursiveBinarySearch(list,0,list.length,Ans);
+                System.out.println("The number " + Ans + " is at index " + index);
+            }
+            }
+
         }
 
         public static int returnSelect() {
