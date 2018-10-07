@@ -149,12 +149,13 @@ public class Run {
                     Select = new File("src\\AvgCase3L.txt");
                     ReadFile.work(Select, Size);
                 }
+            }
 
                 if (selection == 4) { /* Shell Sort */
                     System.out.println("Which data set would you like to test?");
                     System.out.println("\n[1] Best Case ...1 to 10 \n[2] Worst Case ...1 to 10 \n[3] Average Case ...1 to 10");
                     System.out.println("\n[4] Best Case ...1 to 2,000 \n[5] Worst Case ...1 to 2,000 \n[6] Average Case ...1 to 2,000");
-                    caseSelect = userinput.nextInt();
+                    int caseSelect = userinput.nextInt();
 
                     if (caseSelect == 1) {
                         Size = 0;
@@ -193,6 +194,51 @@ public class Run {
                         Select = new File("src\\AvgCase3L.txt");
                         ReadFile.work(Select, Size);
                     }
+                }
+
+                    if (selection == 5) { /* Merge Sort */
+                        System.out.println("Which data set would you like to test?");
+                        System.out.println("\n[1] Best Case ...1 to 10 \n[2] Worst Case ...1 to 10 \n[3] Average Case ...1 to 10");
+                        System.out.println("\n[4] Best Case ...1 to 2,000 \n[5] Worst Case ...1 to 2,000 \n[6] Average Case ...1 to 2,000");
+                        int caseSelect = userinput.nextInt();
+
+                        if (caseSelect == 1) {
+                            Size = 0;
+                            File Select = new File("src\\BestCase.txt");
+                            ReadFile.work(Select, Size);
+                        } else if (caseSelect == 2) {
+                            Size = 0;
+                            File Select = new File("src\\WorstCase.txt");
+                            ReadFile.work(Select, Size);
+                        } else if (caseSelect == 3) {
+                            Size = 0;
+                            File Select = new File("src\\AvgCase1.txt");
+                            ReadFile.work(Select, Size);
+                            System.out.println("\n");
+                            Select = new File("src\\AvgCase2.txt");
+                            ReadFile.work(Select, Size);
+                            System.out.println("\n");
+                            Select = new File("src\\AvgCase3.txt");
+                            ReadFile.work(Select, Size);
+                        } else if (caseSelect == 4) {
+                            Size = 1;
+                            File Select = new File("src\\BestCaseL.txt");
+                            ReadFile.work(Select, Size);
+                        } else if (caseSelect == 5) {
+                            Size = 1;
+                            File Select = new File("src\\WorstCaseL.txt");
+                            ReadFile.work(Select, Size);
+                        } else if (caseSelect == 6) {
+                            Size = 1;
+                            File Select = new File("src\\AvgCase1L.txt");
+                            ReadFile.work(Select, Size);
+                            System.out.println("\n");
+                            Select = new File("src\\AvgCase2L.txt");
+                            ReadFile.work(Select, Size);
+                            System.out.println("\n");
+                            Select = new File("src\\AvgCase3L.txt");
+                            ReadFile.work(Select, Size);
+                        }
 
 
                     if (selection == 6) {
@@ -221,9 +267,9 @@ public class Run {
             }
 
         }
-    }
     public static int returnSelect() {
         return selection;
     }
+
 }
 

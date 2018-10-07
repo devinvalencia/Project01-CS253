@@ -43,6 +43,18 @@ public class ReadFile {
             SelectionSort.sort(temp);
             System.out.println(Arrays.toString(temp));
         }
+        else if ( x== 4) {
+            int[] temp = Arrays.copyOf(temp1, temp1.length);
+            System.out.println(Arrays.toString(temp));
+            ShellSort.sort(temp);
+            System.out.println(Arrays.toString(temp));
+        }
+        else if (x == 5) {
+            int[] temp = Arrays.copyOf(temp1, temp1.length);
+            System.out.println(Arrays.toString(temp));
+            MergeSort.sort(temp, 0, temp.length-1);
+            System.out.println(Arrays.toString(temp));
+        }
 
     }
 }
