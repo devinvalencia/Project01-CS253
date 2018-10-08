@@ -15,7 +15,6 @@ class MergeSort {
 
         for (int j = 0; j < n2; ++j) {
             R[j] = arr[m + 1 + j];
-            compCount++;
         }
 
         int i = 0, j = 0;
@@ -24,11 +23,9 @@ class MergeSort {
         while (i < n1 && j < n2) {
             if (L[i] <= R[j]) {
                 arr[k] = L[i];
-                exCount++;
                 i++;
             } else {
                 arr[k] = R[j];
-                exCount++;
                 j++;
             }
             k++;
@@ -38,12 +35,14 @@ class MergeSort {
             arr[k] = L[i];
             i++;
             k++;
+            exCount++;
         }
 
         while (j < n2) {
             arr[k] = R[j];
             j++;
             k++;
+            compCount++;
         }
     }
 
