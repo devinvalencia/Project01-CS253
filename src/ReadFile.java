@@ -51,12 +51,14 @@ public class ReadFile {
             System.out.println(Arrays.toString(temp));
             ShellSort.sort(temp);
             System.out.println(Arrays.toString(temp));
+            ShellSort.report();
         }
         else if (x == 5) {
             int[] temp = Arrays.copyOf(temp1, temp1.length);
             System.out.println(Arrays.toString(temp));
             MergeSort.sort(temp, 0, temp.length-1);
             System.out.println(Arrays.toString(temp));
+            MergeSort.report();
         }
 
     }

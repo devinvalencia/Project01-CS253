@@ -25,6 +25,8 @@ public class SelectionSort {
     public static void report() {
         System.out.println("Number of Comparisons: " + compCount);
         System.out.println("Number of Exchanges: " + exCount);
+        exCount = 0;
+        compCount = 0;
     }
 
 }
