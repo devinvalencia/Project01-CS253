@@ -37,12 +37,14 @@ public class ReadFile {
             System.out.println(Arrays.toString(temp));
             InsertionSort.sort(temp);
             System.out.println(Arrays.toString(temp));
+            InsertionSort.report();
         }
         else if (x == 3) {
             int[] temp = Arrays.copyOf(temp1, temp1.length);
             System.out.println(Arrays.toString(temp));
             SelectionSort.sort(temp);
             System.out.println(Arrays.toString(temp));
+            SelectionSort.report();
         }
         else if ( x== 4) {
             int[] temp = Arrays.copyOf(temp1, temp1.length);
